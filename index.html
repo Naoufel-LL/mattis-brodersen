@@ -140,57 +140,7 @@
       <div id="overlay" style=" background-color: #010101d7;
       "></div>
        <h1 data-aos="fade-up" data-aos-duration="1000">TOUR DATES</h1><br>
-       <div class="events">
-        <!--Event 1-->
-        <div data-aos="fade-right" data-aos-duration="1000" class="row">
-          <div class="col">
-        <!--date event 1-->
-            <h3>08.07.2023</h3><br>
-        <!--city event 1-->
-            <div style="display: flex;"><img src="./images/de.svg" style="padding-right: 10px;" width="30" alt=""><h2>Föhr</h2></div><br>
-        <!--text event 1-->
-            
-            <p>Live Musik von Mattis Brodersen</p><br>
-          </div>
-          <div class="col">
-            <a href="" class="myButton">
-        <span class="button-content">TICKETS KAUFEN</span>
-            </a>
-          </div>
-        </div>
-        <!--Event 2-->
-        <div data-aos="fade-right" data-aos-duration="1200" class="row">
-          <div class="col">
-        <!--date event 2-->
-            <h3>08.07.2023</h3><br>
-        <!--city event 2-->
-      
-            <div style="display: flex;"><img src="./images/de.svg" style="padding-right: 10px;" width="30" alt=""><h2>Föhr</h2></div><br>
-        <!--text event 2-->
-           
-            <p>Live Musik von Mattis Brodersen</p><br>
-          </div>
-          <div class="col">
-            <a href="" class="myButton">
-        <span class="button-content">TICKETS KAUFEN</span>
-            </a>
-          </div>
-        </div>
-         <div data-aos="fade-right" data-aos-duration="1300" class="row">
-          <div class="col">
-        <!--date event 3-->
-            <h3>08.07.2023</h3><br>
-        <!--city event 3-->
-            <div style="display: flex;"><img src="./images/de.svg" style="padding-right: 10px;" width="30" alt=""><h2>Föhr</h2></div><br>
-        <!--text event 3-->
-            <p>Live Musik von Mattis Brodersen</p><br>
-          </div>
-          <div class="col">
-            <a href="" class="myButton">
-        <span class="button-content">TICKETS KAUFEN</span>
-            </a>
-          </div>
-        </div>
+       <div class="events" id="events">
       </div>
      </div>
      <div class="fohr" id="fohr">
@@ -217,6 +167,7 @@
 
     </div><br>
      </div>
+     <div id="dataContainer" class="events"></div>
      <div class="contact" id="contact">
       <div id="overlay" style="background-color: #010101d7;"></div>
        <div class="contact-center">
@@ -289,5 +240,53 @@
     <script 
     src="https://cdn2.woxo.tech/a.js#64a0d9e7e3f7aeac51ea648a" 
     async data-usrc></script>
+    <script>
+      // Function to fetch JSON data from the file
+      async function fetchData() {
+        try {
+          const response = await fetch('tours.json');
+          const data = await response.json();
+          return data;
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      }
+  
+      // Function to display the data in the HTML
+      async function displayData() {
+        const dataContainer = document.getElementById('events');
+        const jsonData = await fetchData();
+  
+        if (jsonData) {
+          jsonData.forEach(item => {
+            const itemDiv = document.createElement('div');
+            itemDiv.classList.add("row");
+            itemDiv.setAttribute('data-aos', 'fade-right')
+            itemDiv.setAttribute('data-aos-duration', '1000')
+            itemDiv.innerHTML = `
+          <div class="col">
+        <!--date event 1-->
+            <h3>${item.date}</h3><br>
+        <!--city event 1-->
+            <div style="display: flex;"><img src="./images/de.svg" style="padding-right: 10px;" width="30" alt=""><h2>${item.place}</h2></div><br>
+        <!--text event 1-->
+            
+            <p>${item.title}</p><br>
+          </div>
+          <div class="col">
+            <a href="${item.link}" class="myButton">
+        <span class="button-content">TICKETS KAUFEN</span>
+            </a>
+          </div>
+        </div>
+            `;
+            dataContainer.appendChild(itemDiv);
+          });
+        }
+      }
+  
+      // Call the function to display data when the page loads
+      window.onload = displayData;
+    </script>
 </body>
 </html>
