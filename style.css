@@ -889,3 +889,251 @@ background-position: center;
     justify-content: center;
     z-index: 90;
 }
+
+
+/** **/
+
+.spotify .logo {
+  display: inline-block;
+  width: 60px;
+  color: white;
+  text-decoration: none;
+  align-items: center;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.25;
+  text-align: left;
+}
+
+.spotify .spotify-button {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  border-radius: 40px;
+  transition: background-image 0.5s ease-in-out;
+  position: relative;
+  padding: 15px 22px;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.spotify .button-bg {
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.spotify .button-bg:before {
+  content: "";
+  width: 200%;
+  height: 200%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.spotify .button-bg:before {
+  background-color: #1feb6a;
+  background-image: linear-gradient(35deg, #053918, #1feb6a);
+}
+
+.spotify .button-bg,
+.spotify .button-bg:before {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+}
+
+.spotify .button:hover .button-bg:before {
+  transform: translateX(0) translateY(0);
+}
+
+.spotify .item-width {
+  width: 320px;
+  margin: auto;
+}
+
+.spotify .item {
+  display: grid;
+  text-align: center;
+  row-gap: 30px;
+  max-width: 700px;
+  margin: auto;
+  position: relative;
+}
+
+.spotify .cover-container {
+  display: flex;
+  justify-content: center;
+}
+
+.spotify .cover {
+  overflow: hidden;
+  border-radius: 10%;
+  transform: translate3d(0, 0, 0);
+  width: 100%;
+  position: relative;
+  align-self: center;
+}
+
+.spotify .cover::before {
+  display: block;
+  content: "";
+  padding-top: 100%;
+}
+
+.spotify .title {
+}
+
+.spotify .title h1 {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+.spotify .title p {
+  margin: 0;
+}
+
+.spotify .cover img,
+.spotify .cover canvas {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.spotify .cover img {
+  filter: blur(0px);
+  transform: scale3d(1, 1, 1);
+  transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.spotify .animation-started .cover img {
+  filter: blur(4px);
+  transform: scale3d(1.2, 1.2, 1);
+}
+
+.spotify .cover canvas {
+  transition: opacity 0.5s ease-in-out;
+  transform: scale3d(1, 1, 1);
+  opacity: 0;
+}
+
+.spotify .animation-started .cover canvas {
+  opacity: 1;
+}
+
+.spotify .buttons {
+  display: grid;
+  row-gap: 15px;
+  z-index: 0;
+}
+
+.spotify .item-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.spotify .content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  padding: 15px 0;
+}
+
+.spotify .grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 40px;
+  align-items: center;
+  margin: auto;
+}
+
+.spotify .bg-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -100;
+  overflow: hidden;
+  opacity: 0.3;
+}
+
+.spotify .bg-cover-image {
+  background-size: cover;
+  background-position:  center;
+  transform: scale3d(1.2, 1.2, 1);
+  filter: blur(10px);
+  width: 100%;
+  height: 100%;
+}
+
+.spotify .bg-cover-color {
+  display: block;
+  position: absolute;
+  height: 100%;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 1;
+  background: linear-gradient(transparent, black);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.spotify .bg-cover-color-2 {
+  display: block;
+  position: absolute;
+  height: 100%;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.spotify .animation-started .bg-cover-color {
+  opacity: 0;
+}
+
+.spotify .animation-started .bg-cover-color-2 {
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .spotify .grid {
+    grid-template-columns: 1fr;
+    padding: 30px 40px;
+  }
+}
+
+@media (max-width: 350px) {
+  .spotify .item-width {
+    width: 230px;
+  }
+}
+
+.spotify h2{
+  z-index: 2;
+  position: relative;
+  font-size: 7vw;
+  padding: 4%;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FFFFFF;
+  word-wrap: break-word;
+}
