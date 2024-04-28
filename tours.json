@@ -1,31 +1,71 @@
 [
     {
-      "date": "04.11.2023",
-      "place": "Trii Eilun",
-      "title": "Live Musik von Mattis Brodersen 18:30",
-      "link" : "https://www.instagram.com/trii_eilun/"
+      "date": "01.05 - 12.05.2024",
+      "place": "Musikpavillon am Sandwall",
+      "title": "„Musik am Meer“ im Musikpavillon am Sandwall ( 11 Uhr, 15 Uhr, 19 Uhr)",
+      "link" : "https://www.foehr.de/veranstaltungskalender"
     }
     ,{
-      "date": "17.11.2023",
-      "place": "Bogart Bar Mölln",
-      "title": "Live Musik von Mattis Brodersen",
-      "link" : "http://bogarts.bar/"
+      "date": "11/05/2024 20 Uhr",
+      "place": "„Föhr",
+      "title": "Nieblumer Wassersportschule „Föhr Cup“",
+      "link" : "https://www.instagram.com/nwsfoehr/"
 
     }
     ,{
-      "date": "23.12.2023",
-      "place": "Adventsmarkt Namines Deli",
-      "title": "Live Musik von Mattis Brodersen",
-      "link" : "https://naminewitt.de/namines-deli/"
+      "date": "17/05/2024 20 Uhr",
+      "place": "Amrum",
+      "title": "Dünencamping, Wittdün auf Amrum",
+      "link" : "https://www.camping-amrum.de/"
     } ,{
-      "date": "27.12.2023",
-      "place": "Pavillon am Sandwall",
-      "title": "Live Musik von Mattis Brodersen 14:00",
-      "link" : ""
+      "date": "25.05.2024 17 Uhr",
+      "place": "Föhr",
+      "title": "Watt´s UP!",
+      "link" : "https://www.instagram.com/wattsup.foehr?igsh=c3o5dHluMXl4OHN5"
     } ,{
-      "date": "30.12.2023",
-      "place": "Adventsmarkt Namines Deli",
-      "title": "Live Musik von Mattis Brodersen 11:00",
+      "date": "31/05/2024 18 Uhr",
+      "place": "Dithmarschen, Fähren-Konzert",
+      "title": "Live Musik von Mattis Brodersen 18 Uhr",
       "link" : ""
+    },{
+      "date": "08/06/2024 20 Uhr",
+      "place": "Dat lütte Inselfestival",
+      "title": "Dat lütte Inselfestival mit „stilldreaming“",
+      "link" : "https://www.foehr.de/veranstaltungskalender"
+    },{
+      "date": "21/06/2024 20 Uhr",
+      "place": "Föhr",
+      "title": "Nieblumer Wassersportschule „Mittsommernacht“",
+      "link" : "https://www.instagram.com/nwsfoehr/"
+    },{
+      "date": "28/06/2024 17 Uhr",
+      "place": "Föhr",
+      "title": "Watt´s UP! ",
+      "link" : "https://www.instagram.com/wattsup.foehr?igsh=c3o5dHluMXl4OHN5"
+    },{
+      "date": "12.07-17.07.2024",
+      "place": "Musikpavillon am Sandwall mit“",
+      "title": "„Musik am Meer“ im Musikpavillon am Sandwall mit „stilldreaming 11 Uhr, 15 Uhr, 20 Uhr“",
+      "link" : "https://www.foehr.de/veranstaltungskalender"
+    },{
+      "date": "13/07 & 14/07/2024",
+      "place": "Namine´s Deli Sommerfest",
+      "title": "Namine´s Deli Sommerfest",
+      "link" : "https://www.instagram.com/naminesdeli/"
+    },{
+      "date": "25/07/2024 17 Uhr",
+      "place": "Föhr",
+      "title": "Watt´s UP!",
+      "link" : "https://www.instagram.com/wattsup.foehr?igsh=c3o5dHluMXl4OHN5"
+    },{
+      "date": "13/08/2024 20 Uhr",
+      "place": "Inselstraße 125 25946 Wittdün auf Amrum",
+      "title": "Dünencamping, Wittdün auf Amrum",
+      "link" : "https://www.camping-amrum.de/"
+    },{
+      "date": "14/08/2024",
+      "place": "Amrum",
+      "title": "Support Act für Rockpauli, Norddorf auf Amrum",
+      "link" : "https://www.amrum.de/veranstaltungen/norddorf-auf-amrum/e-rock-open-air"
     }
   ]
